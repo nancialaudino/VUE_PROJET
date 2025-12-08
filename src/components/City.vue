@@ -3,22 +3,28 @@
     <h2>{{ name }}</h2>
     <p>Météo : {{ weather }}</p>
     <p>Température : {{ temperature }} °C</p>
-    <p>Dernière mise à jour : {{ updatedAt.toLocaleString() }}</p>
+    <p>Dernière mise à jour : {{ relativeTime }}</p>
   </div>
 </template>
 
 <script>
+import { format } from 'timeago.js'
+
 export default {
   name: "City",
   props: {
-    name: { type: String, default: "Ma ville" },
-    weather: { type: String, default: "Peu nuageux" },
-    temperature: { type: Number, default: 20.55 },
-    updatedAt: { type: Date, default: () => new Date() }
+    name: String,
+    weather: String,
+    temperature: Number,
+    updatedAt: Date
+  },
+  computed: {
+    relativeTime() {
+      return format(this.updatedAt, 'fr')
+    }
   }
 }
 </script>
-
 
 <style scoped>
 .city-card {
