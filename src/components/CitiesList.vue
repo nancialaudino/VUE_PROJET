@@ -14,6 +14,13 @@
           :temperature="16.8"
           :updatedAt="new Date()"
     />
+
+    <City
+          name="Courchevel"
+          weather="Peu nuageux"
+          :temperature="1.2"
+          :updatedAt="new Date()"
+    />
   </div>
 </template>
 
