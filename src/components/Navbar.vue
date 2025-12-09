@@ -15,6 +15,10 @@
           <li class="nav-item">
             <router-link to="/cities" class="nav-link">Liste des villes</router-link>
           </li>
+          <li class="nav-item">
+            <router-link to="/carte" class="nav-link">Carte des villes</router-link>
+          </li>
+
         </ul>
       </div>
     </div>

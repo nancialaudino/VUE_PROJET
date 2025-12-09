@@ -33,5 +33,6 @@ export default {
   margin-bottom: 1rem;
   border-radius: 8px;
   max-width: 400px;
+  text-align: center;
 }
 </style>
